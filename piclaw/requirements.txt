@@ -1,0 +1,6 @@
+requests>=2.31.0
+psutil>=5.9.0
+
+# Optional: only needed on Raspberry Pi hardware
+# RPi.GPIO>=0.7.1
+# adafruit-circuitpython-dht>=3.7.0

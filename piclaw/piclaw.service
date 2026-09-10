@@ -1,0 +1,21 @@
+[Unit]
+Description=PiClaw AI Edge Agent
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/pi-project
+ExecStart=/usr/bin/python3 -m piclaw
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=piclaw
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
